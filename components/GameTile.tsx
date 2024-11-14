@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-const CELL_SIZE = 16;
+const CELL_SIZE = 10;
 const CELL_GAP = 2;
 
 const tileColors: Record<number, { bg: string; text: string }> = {
@@ -43,7 +43,7 @@ export default function GameTile({ tile }: GameTileProps) {
       transition={{
         type: "spring",
         stiffness: 200,
-        damping: 20
+        damping: 25
       }}
       className="absolute flex items-center justify-center rounded-md font-bold"
       style={{

@@ -16,7 +16,7 @@ type Tile = {
 };
 
 const GRID_SIZE = 4;
-const CELL_SIZE = 16;
+const CELL_SIZE = 10;
 const CELL_GAP = 2;
 
 export default function Game2048() {
@@ -196,11 +196,11 @@ export default function Game2048() {
 
   return (
     <div className="flex flex-col items-center justify-center gap-6">
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center justify-center gap-4">
         <h1 className="text-4xl font-bold text-[#776e65]">2048</h1>
-        <div className="flex gap-4">
-          <div className="bg-[#bbada0] rounded-md px-4 py-2 text-white">
-            <h2 className="text-xs uppercase tracking-wide mb-1">Score</h2>
+        <div className="flex items-center gap-8">
+          <div className="bg-[#bbada0] flex items-center rounded-md gap-2 px-86 py-2 text-white">
+            <h2 className="uppercase tracking-wide">Score :</h2>
             <p className="text-xl font-bold">{score}</p>
           </div>
           <Button 
@@ -215,7 +215,7 @@ export default function Game2048() {
 
       <div 
         {...handlers}
-        className="relative bg-[#bbada0] rounded-lg p-2 w-[72rem] h-[72rem]"
+        className="relative bg-[#bbada0] rounded-lg p-2 w-[50rem] h-[50rem]"
       >
         {/* Background grid */}
         {Array.from({ length: GRID_SIZE * GRID_SIZE }).map((_, i) => (
